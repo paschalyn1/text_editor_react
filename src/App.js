@@ -14,6 +14,15 @@ export default function App() {
 
   //setting the data to local storage
   useEffect(() => {
+    if (val === "") 
+    {
+      setWordcount(0)
+      setSentencecount(0)
+      setQuestioncount(0)
+      setexclamationcount(0)
+      setParagraphcount(0)
+      setVal("")
+    }
     if (val !== "") localStorage.setItem("val", JSON.stringify(val));
   }, [val]);
 
